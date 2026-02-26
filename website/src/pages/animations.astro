@@ -1,0 +1,12 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import { animationsPage } from "../content/animations.js";
+
+const content = animationsPage();
+---
+<DocsLayout
+  title="Animation Examples and Demos"
+  description="Browse Oat Animate CSS animation examples including fade, slide, zoom, and pop effects for on-load, hover, and in-view triggers."
+>
+  <Fragment set:html={content} />
+</DocsLayout>

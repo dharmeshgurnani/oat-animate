@@ -1,0 +1,39 @@
+{
+  "name": "ots-animate",
+  "version": "1.1.0",
+  "description": "",
+  "type": "module",
+  "main": "oat-animate/oat-animate.js",
+  "homepage": "https://oat-animate.dharmeshgurnani.com",
+  "author": "dharmesh gurnani (https://dharmeshgurnani.com)",
+  "scripts": {
+    "start": "npx serve -s website/public",
+    "build:lib": "node bin/build-lib.mjs",
+    "build:site": "node bin/build-site.mjs",
+    "build": "npm run build:lib && npm run build:site",
+    "dev:assets": "node bin/sync-dev-assets.mjs",
+    "dev:site": "npm run dev:assets && astro dev --root website",
+    "dev": "npm run dev:site",
+    "cf:deploy": "npm run build && wrangler pages deploy website/public",
+    "cf:dev": "wrangler pages dev website/public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oat-animate",
+    "oat",
+    "css",
+    "animation",
+    "extension",
+    "dharmeshgurnani"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@knadh/oat": "^0.4.0",
+    "@microsoft/clarity": "^1.0.2",
+    "highlight.js": "^11.11.1"
+  },
+  "devDependencies": {
+    "astro": "^5.13.7",
+    "wrangler": "^4.52.0"
+  }
+}

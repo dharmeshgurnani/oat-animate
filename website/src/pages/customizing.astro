@@ -1,0 +1,12 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import { customizingPage } from "../content/customizing.js";
+
+const content = customizingPage();
+---
+<DocsLayout
+  title="Customization Roadmap"
+  description="Explore the Oat Animate customization roadmap including planned controls for timing, easing, presets, and reduced-motion support."
+>
+  <Fragment set:html={content} />
+</DocsLayout>

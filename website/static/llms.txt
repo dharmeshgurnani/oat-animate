@@ -1,0 +1,23 @@
+# Oat Animate
+
+> Oat Animate is a lightweight CSS + JavaScript animation extension for Oat. It enables declarative micro-interactions through the `ot-animate` attribute with on-load, hover, and in-view triggers.
+
+Oat Animate is optimized for simple integration and small bundle size. Use it in landing pages, dashboards, and product UIs where fast-loading motion and straightforward authoring are required.
+
+## Docs
+
+- [Getting Started](https://oat-animate.dharmeshgurnani.com/usage): Installation and usage with npm and CDN.
+- [Animation Demos](https://oat-animate.dharmeshgurnani.com/animations): Live examples for on-load, hover, and in-view patterns.
+- [Customization Roadmap](https://oat-animate.dharmeshgurnani.com/customizing): Planned customization capabilities.
+
+## Library
+
+- [NPM Package](https://www.npmjs.com/package/ots-animate): Package details and versions.
+- [GitHub Repository](https://github.com/dharmeshgurnani/oat-animate): Source code and issues.
+- [JavaScript Source](https://github.com/dharmeshgurnani/oat-animate/blob/main/oat-animate/oat-animate.js): In-view observer behavior.
+- [CSS Source](https://github.com/dharmeshgurnani/oat-animate/blob/main/oat-animate/oat-animate.css): Keyframes and animation selectors.
+
+## Optional
+
+- [Author Website](https://www.dharmeshgurnani.com): Project author.
+

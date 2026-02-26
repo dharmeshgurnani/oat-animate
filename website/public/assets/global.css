@@ -1,0 +1,13 @@
+
+/* Swap theme icons */
+html[data-theme="dark"] .icon-dark {
+  display: none;
+}
+html:not([data-theme="dark"]) .icon-light {
+  display: none;
+}
+
+code {
+  border-radius: 8px;
+  max-width: 60vw;
+}

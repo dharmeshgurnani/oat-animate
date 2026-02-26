@@ -1,0 +1,13 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import { showcasePage } from "../content/showcase.js";
+
+const content = showcasePage();
+---
+<DocsLayout
+  title="UI Showcase and Use Cases"
+  description="See production-style Oat Animate showcase examples and UI patterns to inspire your next landing page, dashboard, or product interface."
+  robots="noindex,nofollow"
+>
+  <Fragment set:html={content} />
+</DocsLayout>

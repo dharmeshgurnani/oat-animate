@@ -1,0 +1,164 @@
+/* Base styles */
+[ot-animate] {
+  will-change: transform, opacity;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  [ot-animate] {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}
+
+/* All Animations And Keyframes */
+/* Keyframes */
+@keyframes ot-fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ot-fade-down {
+  from { opacity: 0.5; transform: translateY(-18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ot-zoom-in {
+  from { transform: scale(0.94); }
+  to { transform: scale(1); }
+}
+
+@keyframes ot-slide-left {
+  from { transform: translateX(24px); }
+  to { transform: translateX(0); }
+}
+
+@keyframes ot-slide-right {
+  from { transform: translateX(-24px); }
+  to { transform: translateX(0); }
+}
+
+@keyframes ot-pop {
+  0% { transform: scale(0.85); }
+  80% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+@keyframes ot-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes ot-flip-in {
+  from { opacity: 0.5; transform: perspective(480px) rotateX(30deg); }
+  to { opacity: 1; transform: perspective(480px) rotateX(0deg); }
+}
+
+@keyframes ot-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes ot-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@keyframes ot-shift-up-2 {
+  from { opacity: 0.5; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(-8px); }
+}
+
+/* ============================================
+   ON-LOAD ANIMATIONS (Pure CSS)
+   ============================================ */
+
+[ot-animate="fade-up"],
+[ot-animate~="fade-up"] {
+  animation: ot-fade-up 0.6s ease forwards;
+}
+
+[ot-animate="fade-down"],
+[ot-animate~="fade-down"]{
+  animation: ot-fade-down 0.6s ease forwards;
+}
+
+[ot-animate="zoom-in"],
+[ot-animate~="zoom-in"] {
+  animation: ot-zoom-in 0.6s ease forwards;
+}
+
+[ot-animate="slide-left"],
+[ot-animate~="slide-left"]{
+  animation: ot-slide-left 0.6s ease forwards;
+}
+
+[ot-animate="slide-right"],
+[ot-animate~="slide-right"]{
+  animation: ot-slide-right 0.6s ease forwards;
+}
+
+[ot-animate="pop"],
+[ot-animate~="pop"]{
+  animation: ot-pop 0.6s ease forwards;
+}
+
+[ot-animate="bounce"],
+[ot-animate~="bounce"] {
+  animation: ot-bounce 0.6s ease forwards;
+}
+
+[ot-animate="flip-in"],
+[ot-animate~="flip-in"] {
+  animation: ot-flip-in 0.6s ease forwards;
+}
+
+[ot-animate="pulse"],
+[ot-animate~="pulse"] {
+  animation: ot-pulse 1s ease infinite;
+}
+
+[ot-animate="shake"],
+[ot-animate~="shake"] {
+  animation: ot-shake 0.4s ease forwards;
+}
+
+[ot-animate="shift-up-2"],
+[ot-animate~="shift-up-2"] {
+  animation: ot-shift-up-2 0.6s ease forwards;
+}
+
+
+/* All Hover Animataions */
+/*ot-animate="hover:fade-up" */
+[ot-animate*="hover:fade-up"]:hover {
+  transform: translateY(-4px);
+  animation: ot-fade-up 0.6s ease forwards;
+}
+
+[ot-animate*="hover:fade-down"]:hover {
+  animation: ot-fade-down 0.6s ease forwards;
+}
+
+[ot-animate*="hover:zoom-in"]:hover {
+
+  animation: ot-zoom-in 0.6s ease forwards;
+}
+
+[ot-animate*="hover:slide-left"]:hover {
+ 
+  animation: ot-slide-left 0.6s ease forwards;
+}
+
+[ot-animate*="hover:slide-right"]:hover {
+
+  animation: ot-slide-right 0.6s ease forwards;
+}
+
+[ot-animate*="hover:pop"]:hover {
+  animation: ot-pop 0.6s ease forwards;
+}
+

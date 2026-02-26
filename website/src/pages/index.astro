@@ -1,0 +1,27 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import { homePage } from "../content/home.js";
+
+const content = homePage();
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Oat Animate",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Web",
+  url: "https://oat-animate.dharmeshgurnani.com",
+  description: "Ultra-lightweight CSS animation library for Oat with on-load, hover, and in-view micro-interactions.",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+};
+---
+<DocsLayout
+  title="CSS Animation Library for Oat"
+  description="Oat Animate is a lightweight CSS animation library for Oat. Add smooth, accessible micro-interactions with simple ot-animate attributes."
+  structuredData={structuredData}
+>
+  <Fragment set:html={content} />
+</DocsLayout>

@@ -1,0 +1,12 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import { usage } from "../content/usage.js";
+
+const content = usage();
+---
+<DocsLayout
+  title="Installation and Usage Guide"
+  description="Learn how to install Oat Animate with npm or CDN and start using on-load, hover, and in-view CSS animations in minutes."
+>
+  <Fragment set:html={content} />
+</DocsLayout>

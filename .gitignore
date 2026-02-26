@@ -39,6 +39,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+public/node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -97,6 +98,7 @@ dist
 
 # Sveltekit cache directory
 .svelte-kit/
+website/.astro/
 
 # vitepress build output
 **/.vitepress/dist
@@ -118,6 +120,7 @@ dist
 
 # Firebase cache directory
 .firebase/
+.wrangler/
 
 # TernJS port file
 .tern-port
@@ -137,3 +140,9 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+website\public\assets\site.js
+
+# Astro generated website output
+website/public/
+website/public/_astro/

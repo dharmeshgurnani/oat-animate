@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oat-animate.dharmeshgurnani.com/sitemap.xml
