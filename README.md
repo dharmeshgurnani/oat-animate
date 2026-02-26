@@ -24,7 +24,6 @@ This repository currently serves two purposes:
 - `flip-in`
 - `pulse`
 - `shake`
-- `shift-up-2`
 
 ## Quick Start
 
@@ -47,8 +46,8 @@ npm run dev
 Add the assets to your page:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ots-animate@1.0.0/dist/oat-animate.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/ots-animate@1.0.0/dist/oat-animate.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ots-animate@latest/dist/oat-animate.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/ots-animate@latest/dist/oat-animate.min.js"></script>
 ```
 
 Then annotate elements:
@@ -63,6 +62,13 @@ Then annotate elements:
 <!-- when entering viewport -->
 <section ot-animate="view:slide-left">In view</section>
 ```
+
+## LLM Metadata
+
+This project includes `llms.txt` metadata (per https://llmstxt.org/):
+
+- Repository file: `./llms.txt`
+- Deployed file: `/llms.txt` from `website/static/llms.txt`
 
 ## Development
 

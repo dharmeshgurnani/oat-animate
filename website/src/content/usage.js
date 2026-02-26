@@ -9,7 +9,7 @@ export function usage() {
     <section class="vstack" >
       <h2>Install via npm</h2>
       <p>If you use a bundler or build step, install the package:</p>
-      <pre><code>npm install ots-animate</code></pre>
+      <pre><code>npm install oat-animate</code></pre>
       <p>
         Then import the CSS/JS from <code>dist/</code> in your app entry, or
         copy the built files into your own asset pipeline.
@@ -19,8 +19,8 @@ export function usage() {
     <section class="vstack" >
       <h2>Use via CDN</h2>
       <p>For a quick drop‑in usage, include the compiled assets from the CDN:</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/ots-animate@1.1.0/dist/oat-animate.min.css&quot;&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/ots-animate@1.1.0/dist/oat-animate.min.js&quot;&gt;&lt;/script&gt;
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/ots-animate@latest/dist/oat-animate.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/ots-animate@latest/dist/oat-animate.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
     </section>
 
