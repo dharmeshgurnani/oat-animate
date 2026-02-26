@@ -8,6 +8,7 @@ const {
   robots = "index,follow",
   ogType = "website",
   ogImage = "/assets/logo.svg",
+  ogImageAlt = "Oat Animate logo",
   structuredData = null,
 } = Astro.props;
 const activePath = Astro.url.pathname;
@@ -52,11 +53,13 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:site_name" content="Oat Animate" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | Oat Animate`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
     <title>{title} | Oat Animate</title>
     <link rel="stylesheet" href="/assets/oat.min.css" />
     <link rel="stylesheet" href="/assets/github-dark.min.css" />
