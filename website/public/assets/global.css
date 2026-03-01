@@ -1,13 +1,21 @@
-
 /* Swap theme icons */
 html[data-theme="dark"] .icon-dark {
   display: none;
 }
+
 html:not([data-theme="dark"]) .icon-light {
   display: none;
 }
 
-code {
-  border-radius: 8px;
-  max-width: 60vw;
+pre {
+  padding: 0px;
+
+  code {
+    border-radius: 8px;
+    max-width: 100%;
+
+    @media screen and (min-width: 600px) {
+      max-width: 60vw;
+    }
+  }
 }

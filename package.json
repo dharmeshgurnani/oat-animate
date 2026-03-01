@@ -1,6 +1,6 @@
 {
   "name": "oat-animate",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "",
   "type": "module",
   "main": "oat-animate/oat-animate.js",

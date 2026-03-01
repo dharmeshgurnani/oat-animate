@@ -65,6 +65,22 @@ Then annotate elements:
 <section ot-animate="view:slide-left">In view</section>
 ```
 
+## Customization
+
+You can customize animation durations, delays, and easings using CSS variables, either globally or inline.
+
+```html
+<!-- Inline customization -->
+<div ot-animate="fade-up" style="--ot-duration: 1.5s; --ot-delay: 0.5s;">
+  Slow and delayed!
+</div>
+```
+
+**Available Variables**:
+- `--ot-duration` (default: `0.6s`)
+- `--ot-delay` (default: `0s`)
+- `--ot-easing` (default: `ease`)
+
 ## LLM Metadata
 
 This project includes `llms.txt` metadata (per https://llmstxt.org/):
