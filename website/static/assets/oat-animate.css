@@ -1,5 +1,8 @@
 /* Base styles */
 [ot-animate] {
+  --ot-duration: 0.6s;
+  --ot-delay: 0s;
+  --ot-easing: ease;
   will-change: transform, opacity;
 }
 
@@ -74,52 +77,52 @@
 
 [ot-animate="fade-up"],
 [ot-animate~="fade-up"] {
-  animation: ot-fade-up 0.6s ease forwards;
+  animation: ot-fade-up var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="fade-down"],
 [ot-animate~="fade-down"]{
-  animation: ot-fade-down 0.6s ease forwards;
+  animation: ot-fade-down var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="zoom-in"],
 [ot-animate~="zoom-in"] {
-  animation: ot-zoom-in 0.6s ease forwards;
+  animation: ot-zoom-in var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="slide-left"],
 [ot-animate~="slide-left"]{
-  animation: ot-slide-left 0.6s ease forwards;
+  animation: ot-slide-left var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="slide-right"],
 [ot-animate~="slide-right"]{
-  animation: ot-slide-right 0.6s ease forwards;
+  animation: ot-slide-right var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="pop"],
 [ot-animate~="pop"]{
-  animation: ot-pop 0.6s ease forwards;
+  animation: ot-pop var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="bounce"],
 [ot-animate~="bounce"] {
-  animation: ot-bounce 0.6s ease forwards;
+  animation: ot-bounce var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="flip-in"],
 [ot-animate~="flip-in"] {
-  animation: ot-flip-in 0.6s ease forwards;
+  animation: ot-flip-in var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate="pulse"],
 [ot-animate~="pulse"] {
-  animation: ot-pulse 1s ease infinite;
+  animation: ot-pulse var(--ot-duration) var(--ot-easing) var(--ot-delay) infinite;
 }
 
 [ot-animate="shake"],
 [ot-animate~="shake"] {
-  animation: ot-shake 0.4s ease forwards;
+  animation: ot-shake var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 
@@ -127,29 +130,25 @@
 /*ot-animate="hover:fade-up" */
 [ot-animate*="hover:fade-up"]:hover {
   transform: translateY(-4px);
-  animation: ot-fade-up 0.6s ease forwards;
+  animation: ot-fade-up var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate*="hover:fade-down"]:hover {
-  animation: ot-fade-down 0.6s ease forwards;
+  animation: ot-fade-down var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate*="hover:zoom-in"]:hover {
-
-  animation: ot-zoom-in 0.6s ease forwards;
+  animation: ot-zoom-in var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate*="hover:slide-left"]:hover {
- 
-  animation: ot-slide-left 0.6s ease forwards;
+  animation: ot-slide-left var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate*="hover:slide-right"]:hover {
-
-  animation: ot-slide-right 0.6s ease forwards;
+  animation: ot-slide-right var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
 
 [ot-animate*="hover:pop"]:hover {
-  animation: ot-pop 0.6s ease forwards;
+  animation: ot-pop var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
 }
-

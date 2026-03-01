@@ -15,12 +15,23 @@ const activePath = Astro.url.pathname;
 const canonicalUrl = Astro.url.href;
 const ogImageUrl = new URL(ogImage, Astro.site ?? Astro.url).toString();
 const isDev = import.meta.env.DEV;
-const oatCss = isDev ? "/assets/oat-animate.css" : "/assets/oat-animate.min.css";
+const oatCss = isDev
+  ? "/assets/oat-animate.css"
+  : "/assets/oat-animate.min.css";
 const oatJs = isDev ? "/assets/oat-animate.js" : "/assets/oat-animate.min.js";
 const minJsPath = new URL("../../../dist/oat-animate.min.js", import.meta.url);
-const minCssPath = new URL("../../../dist/oat-animate.min.css", import.meta.url);
-const minJsGzPath = new URL("../../../dist/oat-animate.min.js.gz", import.meta.url);
-const minCssGzPath = new URL("../../../dist/oat-animate.min.css.gz", import.meta.url);
+const minCssPath = new URL(
+  "../../../dist/oat-animate.min.css",
+  import.meta.url,
+);
+const minJsGzPath = new URL(
+  "../../../dist/oat-animate.min.js.gz",
+  import.meta.url,
+);
+const minCssGzPath = new URL(
+  "../../../dist/oat-animate.min.css.gz",
+  import.meta.url,
+);
 
 function isActive(path) {
   return activePath === path;
@@ -40,6 +51,7 @@ const totalMinGzBytes = getFileSize(minCssGzPath) + getFileSize(minJsGzPath);
 const minifiedSize = totalMinBytes > 0 ? toKb(totalMinBytes) : "--";
 const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -65,105 +77,178 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
     <link rel="stylesheet" href="/assets/github-dark.min.css" />
     <link rel="stylesheet" href="/assets/global.css" />
     <link rel="stylesheet" href={oatCss} />
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Oat Animate",
-      url: Astro.site ?? "https://oat-animate.dharmeshgurnani.com",
-      description,
-      publisher: {
-        "@type": "Person",
-        name: "Dharmesh Gurnani",
-        url: "https://www.dharmeshgurnani.com",
-      },
-    })} />
-    {structuredData && (
-      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-    )}
-    
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Oat Animate",
+        url: Astro.site ?? "https://oat-animate.dharmeshgurnani.com",
+        description,
+        publisher: {
+          "@type": "Person",
+          name: "Dharmesh Gurnani",
+          url: "https://www.dharmeshgurnani.com",
+        },
+      })}
+    />
+    {
+      structuredData && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      )
+    }
+
     <link rel="icon" href="/assets/favicon.ico" />
     <link rel="icon" type="image/png" href="/assets/logo.png" />
     <link rel="icon" type="image/x-icon" href="/assets/logo.ico" />
     <link rel="apple-touch-icon" href="/assets/logo.png" />
     <link rel="apple-touch-icon-precomposed" href="/assets/logo.png" />
-
   </head>
   <body data-sidebar-layout="always">
-   
-      <nav data-topnav class="hstack">
-        <button data-sidebar-toggle aria-label="Toggle menu" class="outline">☰</button>
-        <img src="/assets/logo.svg" alt="Logo" width="100" height="40" />
-      </nav>
+    <nav data-topnav class="hstack">
+      <button data-sidebar-toggle aria-label="Toggle menu" class="outline"
+        >☰</button
+      >
+      <img src="/assets/logo.svg" alt="Logo" width="100" height="40" />
+    </nav>
 
-      <aside data-sidebar>
-        <nav>
-          <ul>
-            <li>
-              <a href="https://github.com/dharmeshgurnani/oat-animate" target="_blank" rel="noreferrer">
-                <img src="/assets/github.svg" alt="GitHub icon" /> GitHub
-              </a>
-            </li>
-            <li><a href="/" aria-current={isActive("/") ? "page" : undefined}>Home</a></li>
-            <li><a href="/usage" aria-current={isActive("/usage") ? "page" : undefined}>Usage</a></li>
-            <li><a href="/customizing" aria-current={isActive("/customizing") ? "page" : undefined}>Customizing</a></li>
-            <li>
-              <details open>
-                <summary>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                      <rect x="3" y="3" width="7" height="7"></rect>
-                      <rect x="14" y="3" width="7" height="7"></rect>
-                      <rect x="14" y="14" width="7" height="7"></rect>
-                      <rect x="3" y="14" width="7" height="7"></rect>
-                    </svg>
-                Animations</summary>
-                <ul>
-                  <li><a href="/animations#onload" aria-current={isActive("/animations#onload") ? "page" : undefined}>On load</a></li>
-                  <li><a href="/animations#onhover" aria-current={isActive("/animations#onhover") ? "page" : undefined}>On hover</a></li>
-                  <li><a href="/animations#inview" aria-current={isActive("/animations#inview") ? "page" : undefined}>In view</a></li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </nav>
-        <footer>
-         <PromotionalCard />
-         <div class="card mb-4 p-4 hstack" ot-animate="pop" style="margin-left:auto;gap:.5rem;">
+    <aside data-sidebar>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/dharmeshgurnani/oat-animate"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/assets/github.svg" alt="GitHub icon" /> GitHub
+            </a>
+          </li>
+          <li>
+            <a href="/" aria-current={isActive("/") ? "page" : undefined}
+              >Home</a>
+          </li>
+          <li>
+            <a
+              href="/usage"
+              aria-current={isActive("/usage") ? "page" : undefined}>Usage</a>
+          </li>
+          <li>
+            <a
+              href="/customizing"
+              aria-current={isActive("/customizing") ? "page" : undefined}
+              >Customizing</a>
+          </li>
+          <li>
+            <details open>
+              <summary>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                >
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Animations</summary
+              >
+              <ul>
+                <li>
+                  <a
+                    href="/animations#onload"
+                    aria-current={isActive("/animations#onload")
+                      ? "page"
+                      : undefined}>On load</a>
+                </li>
+                <li>
+                  <a
+                    href="/animations#onhover"
+                    aria-current={isActive("/animations#onhover")
+                      ? "page"
+                      : undefined}>On hover</a>
+                </li>
+                <li>
+                  <a
+                    href="/animations#inview"
+                    aria-current={isActive("/animations#inview")
+                      ? "page"
+                      : undefined}>In view</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+      <footer>
+        <PromotionalCard />
+        <div
+          class="card mb-4 p-4 hstack"
+          ot-animate="pop"
+          style="margin-left:auto;gap:.5rem;"
+        >
           <small>minified: {minifiedSize}</small>
           <small>minified gz: {minifiedGzSize}</small>
         </div>
-          <button class="w-100 outline small" onclick="toggleTheme()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-            Switch theme
-          </button>
-        </footer>
-      </aside>
+        <button class="w-100 outline small" onclick="toggleTheme()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="icon-light"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="icon-dark"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          Switch theme
+        </button>
+      </footer>
+    </aside>
 
-      <main class="wrap">
-        <div class="container m-4 p-4">
-          <slot />
-        </div>
-        <footer class="hstack p-4">
-           <span class="p-4">👾
-        <a class href="https://www.dharmeshgurnani.com&utm_source=oat-animate" target="_blank">
-           @dharmeshgurnani
-        </a>
+    <main class="wrap">
+      <div class="container m-4 p-4">
+        <slot />
+      </div>
+      <footer class="hstack p-4">
+        <span class="p-4"
+          >👾
+          <a
+            href="https://www.dharmeshgurnani.com&utm_source=oat-animate"
+            target="_blank"
+          >
+            @dharmeshgurnani
+          </a>
         </span>
-        </footer>
-      </main>
-    
+      </footer>
+    </main>
 
     <script src="/assets/oat.min.js" defer is:inline></script>
     <script src="/assets/global.js" is:inline></script>

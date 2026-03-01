@@ -1,35 +1,112 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Explore the Oat Animate customization roadmap including planned controls for timing, easing, presets, and reduced-motion support."><meta name="robots" content="index,follow"><link rel="canonical" href="https://oat-animate.dharmeshgurnani.com/customizing/"><meta property="og:type" content="website"><meta property="og:title" content="Customization Roadmap | Oat Animate"><meta property="og:description" content="Explore the Oat Animate customization roadmap including planned controls for timing, easing, presets, and reduced-motion support."><meta property="og:url" content="https://oat-animate.dharmeshgurnani.com/customizing/"><meta property="og:image" content="https://oat-animate.dharmeshgurnani.com/assets/logo.svg"><meta property="og:image:alt" content="Oat Animate logo"><meta property="og:site_name" content="Oat Animate"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Customization Roadmap | Oat Animate"><meta name="twitter:description" content="Explore the Oat Animate customization roadmap including planned controls for timing, easing, presets, and reduced-motion support."><meta name="twitter:image" content="https://oat-animate.dharmeshgurnani.com/assets/logo.svg"><meta name="twitter:image:alt" content="Oat Animate logo"><title>Customization Roadmap | Oat Animate</title><link rel="stylesheet" href="/assets/oat.min.css"><link rel="stylesheet" href="/assets/github-dark.min.css"><link rel="stylesheet" href="/assets/global.css"><link rel="stylesheet" href="/assets/oat-animate.min.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Oat Animate","url":"https://oat-animate.dharmeshgurnani.com/","description":"Explore the Oat Animate customization roadmap including planned controls for timing, easing, presets, and reduced-motion support.","publisher":{"@type":"Person","name":"Dharmesh Gurnani","url":"https://www.dharmeshgurnani.com"}}</script></head> <body> <div data-sidebar-layout="always"> <nav data-topnav class="hstack"> <img src="/assets/logo.svg" alt="Logo" width="100" height="40"> </nav> <aside data-sidebar> <nav> <ul> <li> <a href="https://github.com/dharmeshgurnani/oat-animate" target="_blank" rel="noreferrer"> <img src="/assets/github.svg" alt="GitHub icon"> GitHub
-</a> </li> <li><a href="/">Home</a></li> <li><a href="/usage">Usage</a></li> <li><a href="/customizing">Customizing</a></li> <li> <details open> <summary> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"> <rect x="3" y="3" width="7" height="7"></rect> <rect x="14" y="3" width="7" height="7"></rect> <rect x="14" y="14" width="7" height="7"></rect> <rect x="3" y="14" width="7" height="7"></rect> </svg>
-Animations</summary> <ul> <li><a href="/animations#onload">On load</a></li> <li><a href="/animations#onhover">On hover</a></li> <li><a href="/animations#inview">In view</a></li> </ul> </details> </li> </ul> </nav> <footer> <div class="card mb-4 p-4 hstack" ot-animate="pop" style="margin-left:auto;gap:.5rem;"> <small>minified: 3.3kb</small> <small>minified gz: 1.0kb</small> </div> <button class="w-100 outline small" onclick="toggleTheme()"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light"> <circle cx="12" cy="12" r="5"></circle> <line x1="12" y1="1" x2="12" y2="3"></line> <line x1="12" y1="21" x2="12" y2="23"></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line> <line x1="1" y1="12" x2="3" y2="12"></line> <line x1="21" y1="12" x2="23" y2="12"></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line> </svg> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg>
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Learn how to customize Oat Animate with CSS variables for durations, delays, and easings."><meta name="robots" content="index,follow"><link rel="canonical" href="https://oat-animate.dharmeshgurnani.com/customizing/"><meta property="og:type" content="website"><meta property="og:title" content="Customization Guide | Oat Animate"><meta property="og:description" content="Learn how to customize Oat Animate with CSS variables for durations, delays, and easings."><meta property="og:url" content="https://oat-animate.dharmeshgurnani.com/customizing/"><meta property="og:image" content="https://oat-animate.dharmeshgurnani.com/assets/logo.svg"><meta property="og:image:alt" content="Oat Animate logo"><meta property="og:site_name" content="Oat Animate"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Customization Guide | Oat Animate"><meta name="twitter:description" content="Learn how to customize Oat Animate with CSS variables for durations, delays, and easings."><meta name="twitter:image" content="https://oat-animate.dharmeshgurnani.com/assets/logo.svg"><meta name="twitter:image:alt" content="Oat Animate logo"><title>Customization Guide | Oat Animate</title><link rel="stylesheet" href="/assets/oat.min.css"><link rel="stylesheet" href="/assets/github-dark.min.css"><link rel="stylesheet" href="/assets/global.css"><link rel="stylesheet" href="/assets/oat-animate.min.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Oat Animate","url":"https://oat-animate.dharmeshgurnani.com/","description":"Learn how to customize Oat Animate with CSS variables for durations, delays, and easings.","publisher":{"@type":"Person","name":"Dharmesh Gurnani","url":"https://www.dharmeshgurnani.com"}}</script><link rel="icon" href="/assets/favicon.ico"><link rel="icon" type="image/png" href="/assets/logo.png"><link rel="icon" type="image/x-icon" href="/assets/logo.ico"><link rel="apple-touch-icon" href="/assets/logo.png"><link rel="apple-touch-icon-precomposed" href="/assets/logo.png"></head> <body data-sidebar-layout="always"> <nav data-topnav class="hstack"> <button data-sidebar-toggle aria-label="Toggle menu" class="outline">☰</button> <img src="/assets/logo.svg" alt="Logo" width="100" height="40"> </nav> <aside data-sidebar> <nav> <ul> <li> <a href="https://github.com/dharmeshgurnani/oat-animate" target="_blank" rel="noreferrer"> <img src="/assets/github.svg" alt="GitHub icon"> GitHub
+</a> </li> <li> <a href="/">Home</a> </li> <li> <a href="/usage">Usage</a> </li> <li> <a href="/customizing">Customizing</a> </li> <li> <details open> <summary> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"> <rect x="3" y="3" width="7" height="7"></rect> <rect x="14" y="3" width="7" height="7"></rect> <rect x="14" y="14" width="7" height="7"></rect> <rect x="3" y="14" width="7" height="7"></rect> </svg>
+Animations</summary> <ul> <li> <a href="/animations#onload">On load</a> </li> <li> <a href="/animations#onhover">On hover</a> </li> <li> <a href="/animations#inview">In view</a> </li> </ul> </details> </li> </ul> </nav> <footer> <div class="card p-4 mb-4" ot-animate="fade-up"> <h4>Vectormotion</h4> <p>100+ Animated UI blocks for modern dashboards</p> <button onclick="window.open(`https://vectormotion.dev?utm_source=oat-animate&utm_medium=referral&utm_campaign=oat-animate`, '_blank')" class="outline w-100">Get Started</button> </div> <div class="card mb-4 p-4 hstack" ot-animate="pop" style="margin-left:auto;gap:.5rem;"> <small>minified: 4.0kb</small> <small>minified gz: 1.0kb</small> </div> <button class="w-100 outline small" onclick="toggleTheme()"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light"> <circle cx="12" cy="12" r="5"></circle> <line x1="12" y1="1" x2="12" y2="3"></line> <line x1="12" y1="21" x2="12" y2="23"></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line> <line x1="1" y1="12" x2="3" y2="12"></line> <line x1="21" y1="12" x2="23" y2="12"></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line> </svg> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg>
 Switch theme
 </button> </footer> </aside> <main class="wrap"> <div class="container m-4 p-4">  
     <section class="vstack" ot-animate="fade-up">
-      <h2>Customisation roadmap</h2>
+      <h2>Customizations</h2>
       <p>
-        Oat Animate is intentionally minimal right now – most behaviour is driven
-        by sensible defaults so you can drop it into any Oat project and get
-        nice micro–interactions without a configuration step.
+        Oat Animate provides a lightweight customization layer using <strong>CSS Variables</strong>. 
+        This allows you to override default animation behavior globally, per-component, or inline.
       </p>
+
+      <br />
+      <h3>Available Variables</h3>
       <p>
-        Future updates will introduce a lightweight customisation layer so you
-        can:
+        The following CSS variables are available on <code>[ot-animate]</code> elements, along with their default values:
       </p>
       <ul>
-        <li>tune global defaults such as duration, delay and easing</li>
-        <li>define your own named animation presets</li>
-        <li>opt‑in to reduced‑motion friendly variants</li>
-        <li>override settings per‑component via simple data attributes</li>
+        <li><code>--ot-duration</code>: <code>0.6s</code> (The length of the animation)</li>
+        <li><code>--ot-delay</code>: <code>0s</code> (The delay before the animation starts)</li>
+        <li><code>--ot-easing</code>: <code>ease</code> (The timing function of the animation)</li>
       </ul>
+
+      <br />
+      <h3>Global Customization</h3>
       <p>
-        For now, think of this page as a placeholder. As the API stabilises,
-        it will be updated with concrete examples and copy‑paste snippets you
-        can use to tailor animations to your design system.
+        To change the defaults for all animations in your project, simply override the variables in your global CSS:
       </p>
+      <pre><code class="language-css">
+:root {
+  --ot-duration: 0.8s;
+  --ot-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+      </code></pre>
+
+      <br />
+      <h3>Inline Customization</h3>
+      <p>
+        You can easily tailor individual animations using inline styles. This is particularly useful for creating staggered animations or custom delays.
+      </p>
+      
+      <div class="ot-demo">
+        <ot-tabs>
+          <div role="tablist">
+            <button role="tab" aria-selected="true" tabindex="0">
+              ⧉ Preview
+            </button>
+            <button role="tab" aria-selected="false" tabindex="-1">
+              {} Code
+            </button>
+          </div>
+
+          <!-- ⧉ Preview Tab -->
+          <div role="tabpanel">
+            <div class="row">
+              <article class="card col-12">
+                <header>
+                  <h3>Staggered Example</h3>
+                </header>
+                <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; padding: 2rem;">
+                  <button class="demo-btn" ot-animate="slide-right" style="--ot-delay: 0.1s">Item 1</button>
+                  <button class="demo-btn" ot-animate="slide-right" style="--ot-delay: 0.2s">Item 2</button>
+                  <button class="demo-btn" ot-animate="slide-right" style="--ot-delay: 0.3s">Item 3</button>
+                </div>
+              </article>
+            </div>
+            <br />
+            <div class="row">
+              <article class="card col-12">
+                <header>
+                  <h3>Slow & Delayed</h3>
+                </header>
+                <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; padding: 2rem;">
+                  <div ot-animate="fade-up" style="--ot-duration: 1.5s; --ot-delay: 0.5s; padding: 1rem; background: var(--surface-2); border-radius: 8px;">
+                    I am slow and delayed!
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Code Tab -->
+          <div role="tabpanel" hidden="">
+            <pre class="giallo"><code>&lt;!-- Staggered Example --&gt;
+&lt;button class=&quot;demo-btn&quot; ot-animate=&quot;slide-right&quot; style=&quot;--ot-delay: 0.1s&quot;&gt;Item 1&lt;/button&gt;
+&lt;button class=&quot;demo-btn&quot; ot-animate=&quot;slide-right&quot; style=&quot;--ot-delay: 0.2s&quot;&gt;Item 2&lt;/button&gt;
+&lt;button class=&quot;demo-btn&quot; ot-animate=&quot;slide-right&quot; style=&quot;--ot-delay: 0.3s&quot;&gt;Item 3&lt;/button&gt;
+
+&lt;!-- Slow &amp; Delayed --&gt;
+&lt;div ot-animate=&quot;fade-up&quot; style=&quot;--ot-duration: 1.5s; --ot-delay: 0.5s;&quot;&gt;
+  I am slow and delayed!
+&lt;/div&gt;</code></pre>
+          </div>
+        </ot-tabs>
+      </div>
+
+      <br />
+      <h3>Reduced Motion</h3>
+      <p>
+        Oat Animate comes with built-in accessibility for users who prefer reduced motion. 
+        If a user's operating system is set to <code>prefers-reduced-motion: reduce</code>, 
+        all animations and transitions are automatically disabled by the library.
+      </p>
+
     </section>
     </div> <footer class="hstack p-4"> <span class="p-4">👾
-<a class href="https://www.dharmeshgurnani.com&utm_source=oat-animate" target="_blank">
+<a href="https://www.dharmeshgurnani.com&utm_source=oat-animate" target="_blank">
 @dharmeshgurnani
-</a> </span> </footer> </main> </div> <script src="/assets/oat.min.js" defer></script> <script src="/assets/global.js"></script> <script src="/assets/oat-animate.min.js"></script> <script type="module" src="/_astro/DocsLayout.astro_astro_type_script_index_0_lang.BFElG0hx.js"></script> <script>
+</a> </span> </footer> </main> <script src="/assets/oat.min.js" defer></script> <script src="/assets/global.js"></script> <script src="/assets/oat-animate.min.js"></script> <script type="module" src="/_astro/DocsLayout.astro_astro_type_script_index_0_lang.BFElG0hx.js"></script> <script>
   (function (c, l, a, r, i, t, y) {
     c[a] =
       c[a] ||
