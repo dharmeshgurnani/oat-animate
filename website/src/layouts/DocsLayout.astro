@@ -1,7 +1,7 @@
 ---
 import { existsSync, statSync } from "node:fs";
 import Clarity from "../components/Clarity.astro";
-
+import PromotionalCard from "../components/PromotionalCard.astro";
 const {
   title = "Oat Animate",
   description = "Oat Animate is an ultra-lightweight CSS animation library for Oat that adds production-ready micro-interactions with simple ot-animate attributes.",
@@ -125,6 +125,7 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
           </ul>
         </nav>
         <footer>
+         <PromotionalCard />
          <div class="card mb-4 p-4 hstack" ot-animate="pop" style="margin-left:auto;gap:.5rem;">
           <small>minified: {minifiedSize}</small>
           <small>minified gz: {minifiedGzSize}</small>
