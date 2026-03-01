@@ -1,13 +1,14 @@
 ---
 import { existsSync, statSync } from "node:fs";
 import Clarity from "../components/Clarity.astro";
-
+import PromotionalCard from "../components/PromotionalCard.astro";
 const {
   title = "Oat Animate",
   description = "Oat Animate is an ultra-lightweight CSS animation library for Oat that adds production-ready micro-interactions with simple ot-animate attributes.",
   robots = "index,follow",
   ogType = "website",
   ogImage = "/assets/logo.svg",
+  ogImageAlt = "Oat Animate logo",
   structuredData = null,
 } = Astro.props;
 const activePath = Astro.url.pathname;
@@ -52,11 +53,13 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:site_name" content="Oat Animate" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | Oat Animate`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
     <title>{title} | Oat Animate</title>
     <link rel="stylesheet" href="/assets/oat.min.css" />
     <link rel="stylesheet" href="/assets/github-dark.min.css" />
@@ -77,10 +80,18 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
+    
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico" />
+    <link rel="apple-touch-icon" href="/assets/logo.png" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/logo.png" />
+
   </head>
-  <body>
-    <div data-sidebar-layout="always">
+  <body data-sidebar-layout="always">
+   
       <nav data-topnav class="hstack">
+        <button data-sidebar-toggle aria-label="Toggle menu" class="outline">☰</button>
         <img src="/assets/logo.svg" alt="Logo" width="100" height="40" />
       </nav>
 
@@ -106,15 +117,16 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
                     </svg>
                 Animations</summary>
                 <ul>
-                  <li><a href="/animations#onload" aria-current={isActive("/animations") ? "page" : undefined}>On load</a></li>
-                  <li><a href="/animations#onhover" aria-current={isActive("/animations") ? "page" : undefined}>On hover</a></li>
-                  <li><a href="/animations#inview" aria-current={isActive("/animations") ? "page" : undefined}>In view</a></li>
+                  <li><a href="/animations#onload" aria-current={isActive("/animations#onload") ? "page" : undefined}>On load</a></li>
+                  <li><a href="/animations#onhover" aria-current={isActive("/animations#onhover") ? "page" : undefined}>On hover</a></li>
+                  <li><a href="/animations#inview" aria-current={isActive("/animations#inview") ? "page" : undefined}>In view</a></li>
                 </ul>
               </details>
             </li>
           </ul>
         </nav>
         <footer>
+         <PromotionalCard />
          <div class="card mb-4 p-4 hstack" ot-animate="pop" style="margin-left:auto;gap:.5rem;">
           <small>minified: {minifiedSize}</small>
           <small>minified gz: {minifiedGzSize}</small>
@@ -151,7 +163,7 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
         </span>
         </footer>
       </main>
-    </div>
+    
 
     <script src="/assets/oat.min.js" defer is:inline></script>
     <script src="/assets/global.js" is:inline></script>

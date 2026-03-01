@@ -1,5 +1,7 @@
 # Oat Animate
 
+![Oat Animate Logo](https://oat-animate.dharmeshgurnani.com/assets/logo.svg)
+
 Oat Animate is a lightweight animation extension for [Oat](https://github.com/knadh/oat), plus a docs/demo website that showcases how to use it.
 
 This repository currently serves two purposes:
