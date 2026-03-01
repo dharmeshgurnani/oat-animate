@@ -80,6 +80,13 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
+    
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo.ico" />
+    <link rel="apple-touch-icon" href="/assets/logo.png" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/logo.png" />
+
   </head>
   <body>
     <div data-sidebar-layout="always">
@@ -109,9 +116,9 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
                     </svg>
                 Animations</summary>
                 <ul>
-                  <li><a href="/animations#onload" aria-current={isActive("/animations") ? "page" : undefined}>On load</a></li>
-                  <li><a href="/animations#onhover" aria-current={isActive("/animations") ? "page" : undefined}>On hover</a></li>
-                  <li><a href="/animations#inview" aria-current={isActive("/animations") ? "page" : undefined}>In view</a></li>
+                  <li><a href="/animations#onload" aria-current={isActive("/animations#onload") ? "page" : undefined}>On load</a></li>
+                  <li><a href="/animations#onhover" aria-current={isActive("/animations#onhover") ? "page" : undefined}>On hover</a></li>
+                  <li><a href="/animations#inview" aria-current={isActive("/animations#inview") ? "page" : undefined}>In view</a></li>
                 </ul>
               </details>
             </li>
