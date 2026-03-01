@@ -88,9 +88,10 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
     <link rel="apple-touch-icon-precomposed" href="/assets/logo.png" />
 
   </head>
-  <body>
-    <div data-sidebar-layout="always">
+  <body data-sidebar-layout="always">
+   
       <nav data-topnav class="hstack">
+        <button data-sidebar-toggle aria-label="Toggle menu" class="outline">☰</button>
         <img src="/assets/logo.svg" alt="Logo" width="100" height="40" />
       </nav>
 
@@ -162,7 +163,7 @@ const minifiedGzSize = totalMinGzBytes > 0 ? toKb(totalMinGzBytes) : "--";
         </span>
         </footer>
       </main>
-    </div>
+    
 
     <script src="/assets/oat.min.js" defer is:inline></script>
     <script src="/assets/global.js" is:inline></script>
