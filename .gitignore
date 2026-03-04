@@ -141,8 +141,12 @@ website/.astro/
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-website\public\assets\site.js
-
 # Astro generated website output
 website/public/
 website/public/_astro/
+
+# Generated/Copied assets in website/client/assets
+website/client/assets/oat-animate*
+website/client/assets/oat.min*
+website/client/assets/github-dark.min.css
+
