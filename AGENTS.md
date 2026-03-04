@@ -22,7 +22,7 @@ The repository is modularized into two distinct parts:
 2. **`website/` (The Demo & Docs)**
    - Built using **Astro**.
    - Contains documentation, API references, and live previews.
-   - Website content is mainly in `website/src/pages/` and `website/src/content/`.
+   - Website content is in `website/src/pages/`.
 
 3. **`bin/` (Build Scripts)**
    - `build-lib.mjs`: Script to minify CSS/JS, gzip them, output to `/dist`, and copy the assets to `/website/static/assets/` so the Astro site can use the latest library code.
@@ -46,7 +46,7 @@ The user manages the project via standard NPM scripts defined in `package.json`.
 
 2. **If editing Documentation/Site**:
    - Navigate to `website/src/`.
-   - Update the respective `.astro` or `.md`/`.js` content files.
+   - Update the respective `.astro` or `.md` files.
 
 3. **If learning more about usage**:
    - Refer to `./llms.txt` for standard LLM metadata and links.
