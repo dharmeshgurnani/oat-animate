@@ -3,6 +3,10 @@
   --ot-duration: 0.6s;
   --ot-delay: 0s;
   --ot-easing: ease;
+  animation-duration: var(--ot-duration);
+  animation-delay: var(--ot-delay);
+  animation-timing-function: var(--ot-easing);
+  animation-fill-mode: forwards;
   will-change: transform, opacity;
 }
 
@@ -16,7 +20,6 @@
   }
 }
 
-/* All Animations And Keyframes */
 /* Keyframes */
 @keyframes ot-fade-up {
   from {
@@ -138,90 +141,75 @@
   }
 }
 
-
-/* ============================================
-   ON-LOAD ANIMATIONS (Pure CSS)
-   ============================================ */
-
-[ot-animate="fade-up"],
+/* Animation Classes (On-load) */
 [ot-animate~="fade-up"] {
-  animation: ot-fade-up var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-fade-up;
 }
 
-[ot-animate="fade-down"],
 [ot-animate~="fade-down"] {
-  animation: ot-fade-down var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-fade-down;
 }
 
-[ot-animate="zoom-in"],
 [ot-animate~="zoom-in"] {
-  animation: ot-zoom-in var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-zoom-in;
 }
 
-[ot-animate="slide-left"],
 [ot-animate~="slide-left"] {
-  animation: ot-slide-left var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-slide-left;
 }
 
-[ot-animate="slide-right"],
 [ot-animate~="slide-right"] {
-  animation: ot-slide-right var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-slide-right;
 }
 
-[ot-animate="pop"],
 [ot-animate~="pop"] {
-  animation: ot-pop var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-pop;
 }
 
-[ot-animate="bounce"],
 [ot-animate~="bounce"] {
-  animation: ot-bounce var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-bounce;
 }
 
-[ot-animate="flip-in"],
 [ot-animate~="flip-in"] {
-  animation: ot-flip-in var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-flip-in;
 }
 
-[ot-animate="pulse"],
-[ot-animate~="pulse"] {
-  animation: ot-pulse var(--ot-duration) var(--ot-easing) var(--ot-delay) infinite;
-}
-
-[ot-animate="shake"],
 [ot-animate~="shake"] {
-  animation: ot-shake var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-shake;
 }
 
+[ot-animate~="pulse"] {
+  animation-name: ot-pulse;
+  animation-iteration-count: infinite;
+}
 
-/* All Hover Animataions */
-/*ot-animate="hover:fade-up" */
+/* Hover Animations */
 [ot-animate*="hover:fade-up"]:hover {
   transform: translateY(-4px);
-  animation: ot-fade-up var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-fade-up;
 }
 
 [ot-animate*="hover:fade-down"]:hover {
-  animation: ot-fade-down var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-fade-down;
 }
 
 [ot-animate*="hover:zoom-in"]:hover {
-  animation: ot-zoom-in var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-zoom-in;
 }
 
 [ot-animate*="hover:slide-left"]:hover {
-  animation: ot-slide-left var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-slide-left;
 }
 
 [ot-animate*="hover:slide-right"]:hover {
-  animation: ot-slide-right var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-slide-right;
 }
 
 [ot-animate*="hover:pop"]:hover {
-  animation: ot-pop var(--ot-duration) var(--ot-easing) var(--ot-delay) forwards;
+  animation-name: ot-pop;
 }
 
-/* All View Animations */
+/* View Animations (HIDDEN initially) */
 [ot-animate*="view:"] {
   opacity: 0 !important;
 }

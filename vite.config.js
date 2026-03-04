@@ -36,9 +36,7 @@ function stageBuiltAssets() {
 export default defineConfig({
     build: {
         lib: {
-            entry: {
-                "oat-animate": resolve(__dirname, "oat-animate/oat-animate.js"),
-            },
+            entry: resolve(__dirname, "oat-animate/oat-animate.js"),
             name: "OATAnimate",
             formats: ["iife"],
             fileName: (format) => `oat-animate.min.js`,
@@ -59,6 +57,14 @@ export default defineConfig({
         emptyOutDir: true,
     },
     plugins: [
+        {
+            name: "virtual-css-import",
+            transform(code, id) {
+                if (id.endsWith("oat-animate.js")) {
+                    return `import "./oat-animate.css";\n${code}`;
+                }
+            },
+        },
         compression({
             verbose: true,
             disable: false,

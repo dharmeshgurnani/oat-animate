@@ -9,7 +9,6 @@
     },
     "dependencies": {
         "@knadh/oat": "^0.4.0",
-        "@microsoft/clarity": "^1.0.2",
         "highlight.js": "^11.11.1",
         "oat-animate": "file:.."
     },
