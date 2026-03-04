@@ -22,18 +22,17 @@ The repository is modularized into two distinct parts:
 2. **`website/` (The Demo & Docs)**
    - Built using **Astro**.
    - Contains documentation, API references, and live previews.
-   - Website content is mainly in `website/src/pages/` and `website/src/content/`.
+   - Website content is in `website/src/pages/`.
 
-3. **`bin/` (Build Scripts)**
-   - `build-lib.mjs`: Script to minify CSS/JS, gzip them, output to `/dist`, and copy the assets to `/website/static/assets/` so the Astro site can use the latest library code.
+3. **`vite.config.js`**
+   - The central build configuration. It handles minification, gzipping, and asset staging for the website documentation.
 
 ## 🛠️ Key Commands & Workflow
 
 The user manages the project via standard NPM scripts defined in `package.json`.
 
-- **`npm run dev`**: Starts the Astro dev site for documentation/demoing (`http://localhost:3000`).
-- **`npm run build:lib`**: Compiles, minifies, and gzips the core library into `/dist` and synchronizes with the website's static public folder. 
-   - ⚠️ **Critical Context**: If you edit files in `oat-animate/`, you **must** run this command for the changes to reflect in the website.
+- **`npm run dev`**: Syncs library assets (via `vite build`) and starts the Astro dev site (`http://localhost:4321`).
+- **`npm run build:lib`**: Compiles, minified, and gzips the core library into `/dist` and stages them for the website documentation using Vite.
 - **`npm run build:site`**: Builds the static Astro website for production.
 - **`npm run build`**: Runs both the library and site builds sequentially.
 
@@ -41,12 +40,12 @@ The user manages the project via standard NPM scripts defined in `package.json`.
 
 1. **If modifying Core Animations**:
    - Edit `oat-animate/oat-animate.css` (for keyframes/transitions) or `oat-animate.js` (for observer logic).
-   - Run `npm run build:lib` to persist changes.
-   - Test by running `npm run dev` and viewing the Astro site.
+   - Run `npm run build:lib` (or `npm run dev`) to persist changes to the website.
+   - Test by viewing the Astro site.
 
 2. **If editing Documentation/Site**:
    - Navigate to `website/src/`.
-   - Update the respective `.astro` or `.md`/`.js` content files.
+   - Update the respective `.astro` or `.md` files.
 
 3. **If learning more about usage**:
    - Refer to `./llms.txt` for standard LLM metadata and links.
@@ -54,4 +53,5 @@ The user manages the project via standard NPM scripts defined in `package.json`.
 
 4. **Dependencies & Style**:
    - The core library has **no dependencies**. Write only Vanilla JS and standard CSS.
+   - Website-specific dependencies (Astro, highlight.js, etc.) are managed in `website/package.json`.
    - Keep the bundle footprint extremely small.

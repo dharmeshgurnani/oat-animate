@@ -2,7 +2,7 @@
 
 > Oat Animate is a lightweight CSS + JavaScript animation extension for Oat. It enables declarative micro-interactions through the `ot-animate` attribute with on-load, hover, and in-view triggers.
 
-Oat Animate is optimized for simple integration and small bundle size. Use it in landing pages, dashboards, and product UIs where fast-loading motion and straightforward authoring are required.
+Oat Animate is optimized for simple integration and small bundle size. Use it in landing pages, dashboards, and product UIs where fast-loading motion and straightforward authoring are required. The project is split into a core library and an Astro-based documentation website.
 
 ## Docs
 

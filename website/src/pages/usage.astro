@@ -1,12 +1,84 @@
 ---
 import DocsLayout from "../layouts/DocsLayout.astro";
-import { usage } from "../content/usage.js";
-
-const content = usage();
 ---
+
 <DocsLayout
   title="Installation and Usage Guide"
   description="Learn how to install Oat Animate with npm or CDN and start using on-load, hover, and in-view CSS animations in minutes."
 >
-  <Fragment set:html={content} />
+  <section class="vstack p-4" ot-animate="fade-up">
+    <h1>Installation and usage</h1>
+    <p>
+      Add animations to any element using the <code>ot-animate</code> attribute.
+    </p>
+
+    <section class="vstack">
+      <h2>Install via npm</h2>
+      <p>If you use a bundler or build step, install the package:</p>
+      <pre><code>npm install oat-animate</code></pre>
+      <p>
+        Then import the CSS/JS from <code>dist/</code> in your app entry, or copy
+        the built files into your own asset pipeline.
+      </p>
+    </section>
+    <br />
+    <section class="vstack">
+      <h2>Use via CDN</h2>
+      <p>
+        For a quick drop‑in usage, include the compiled assets from the CDN:
+      </p>
+      <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/ots-animate@latest/dist/oat-animate.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/ots-animate@latest/dist/oat-animate.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+    </section>
+
+    <section class="vstack">
+      <h2>Animation Types</h2>
+      <p>Available animations:</p>
+      <ul>
+        <li><code>fade-up</code> - Fades in while moving upward</li>
+        <li><code>fade-down</code> - Fades in while moving downward</li>
+        <li><code>zoom-in</code> - Scales up from smaller size</li>
+        <li><code>slide-left</code> - Slides in from right</li>
+        <li><code>slide-right</code> - Slides in from left</li>
+        <li><code>pop</code> - Quick bounce scale effect</li>
+        <li><code>bounce</code> - Bouncing movement</li>
+        <li><code>flip-in</code> - 3D flip effect</li>
+        <li><code>pulse</code> - Pulsing scale animation (loops)</li>
+        <li><code>shake</code> - Horizontal shake effect</li>
+      </ul>
+    </section>
+
+    <section class="vstack0">
+      <h2>On Load Animation</h2>
+      <p>Animation plays when page loads:</p>
+      <pre><code>
+&lt;div ot-animate=&quot;fade-up&quot;&gt;Content&lt;/div&gt;
+      </code></pre>
+    </section>
+
+    <section class="vstack">
+      <h2>On Hover Animation</h2>
+      <p>Animation plays on mouse hover:</p>
+      <pre><code>
+&lt;div ot-animate=&quot;hover:fade-up&quot;&gt;Content&lt;/div&gt;
+      </code></pre>
+    </section>
+
+    <section class="vstack">
+      <h2>In View Animation</h2>
+      <p>Animation plays when element scrolls into viewport:</p>
+      <pre><code>
+&lt;div ot-animate=&quot;view:fade-up&quot;&gt;Content&lt;/div&gt;
+      </code></pre>
+    </section>
+
+    <section class="vstack">
+      <h2>Multiple Animations</h2>
+      <p>Combine multiple animations on a single element:</p>
+      <pre><code>
+&lt;div ot-animate=&quot;fade-up hover:zoom-in&quot;&gt;Content&lt;/div&gt;
+      </code></pre>
+    </section>
+  </section>
 </DocsLayout>
