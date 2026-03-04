@@ -8,7 +8,7 @@ const __dirname = dirname(__filename);
 
 const rootDir = join(__dirname, "..");
 const staticAssetsDir = join(rootDir, "website", "static", "assets");
-const nodeModulesDir = join(rootDir, "node_modules");
+const nodeModulesDir = join(rootDir, "website", "node_modules");
 const libraryDir = join(rootDir, "oat-animate");
 const distDir = join(rootDir, "dist");
 

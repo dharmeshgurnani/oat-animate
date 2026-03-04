@@ -90,8 +90,10 @@ This project includes `llms.txt` metadata (per https://llmstxt.org/):
 
 ## Development
 
-- `npm run dev`: runs the Astro docs site in development mode
-- `npm run build`: builds the library bundle and Astro site into `website/public/`
+- `npm run dev`: runs the library asset sync and then the Astro docs site via the website package.
+- `npm run build`: builds the library bundle and then the Astro site into `website/public/`.
+- `npm run build:lib`: builds only the library.
+- `npm run build:site`: builds only the website (requires `npm run build:lib` first for latest assets).
 
 ## License
 

@@ -54,4 +54,5 @@ The user manages the project via standard NPM scripts defined in `package.json`.
 
 4. **Dependencies & Style**:
    - The core library has **no dependencies**. Write only Vanilla JS and standard CSS.
+   - Website-specific dependencies (Astro, highlight.js, etc.) are managed in `website/package.json`.
    - Keep the bundle footprint extremely small.

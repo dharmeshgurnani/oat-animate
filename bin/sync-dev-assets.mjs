@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const rootDir = join(__dirname, "..");
-const nodeModulesDir = join(rootDir, "node_modules");
+const nodeModulesDir = join(rootDir, "website", "node_modules");
 const libraryDir = join(rootDir, "oat-animate");
 const staticAssetsDir = join(rootDir, "website", "static", "assets");
 

@@ -1,0 +1,20 @@
+{
+    "name": "oat-animate-website",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "node ../bin/build-site.mjs",
+        "deploy": "wrangler pages deploy public"
+    },
+    "dependencies": {
+        "@knadh/oat": "^0.4.0",
+        "@microsoft/clarity": "^1.0.2",
+        "highlight.js": "^11.11.1",
+        "oat-animate": "file:.."
+    },
+    "devDependencies": {
+        "astro": "^5.13.7",
+        "wrangler": "^4.52.0"
+    }
+}
