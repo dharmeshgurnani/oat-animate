@@ -5,7 +5,6 @@ import compression from "vite-plugin-compression";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 const websiteAssetsDir = resolve(__dirname, "website/static/assets");
-const websiteNodeModules = resolve(__dirname, "website/node_modules");
 
 function stageBuiltAssets() {
     return {
@@ -78,15 +77,15 @@ export default defineConfig({
                     dest: "../website/static/assets/",
                 },
                 {
-                    src: "website/node_modules/@knadh/oat/oat.min.css",
+                    src: "node_modules/@knadh/oat/oat.min.css",
                     dest: "../website/static/assets/",
                 },
                 {
-                    src: "website/node_modules/@knadh/oat/oat.min.js",
+                    src: "node_modules/@knadh/oat/oat.min.js",
                     dest: "../website/static/assets/",
                 },
                 {
-                    src: "website/node_modules/highlight.js/styles/github-dark.min.css",
+                    src: "node_modules/highlight.js/styles/github-dark.min.css",
                     dest: "../website/static/assets/",
                 },
             ],
