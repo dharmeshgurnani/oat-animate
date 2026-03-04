@@ -4,7 +4,7 @@ import { copyFileSync, existsSync, mkdirSync } from "fs";
 import compression from "vite-plugin-compression";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
-const websiteAssetsDir = resolve(__dirname, "website/static/assets");
+const websiteAssetsDir = resolve(__dirname, "website/client/assets");
 
 function stageBuiltAssets() {
     return {
@@ -70,23 +70,23 @@ export default defineConfig({
             targets: [
                 {
                     src: "oat-animate/oat-animate.js",
-                    dest: "../website/static/assets/",
+                    dest: "../website/client/assets/",
                 },
                 {
                     src: "oat-animate/oat-animate.css",
-                    dest: "../website/static/assets/",
+                    dest: "../website/client/assets/",
                 },
                 {
                     src: "node_modules/@knadh/oat/oat.min.css",
-                    dest: "../website/static/assets/",
+                    dest: "../website/client/assets/",
                 },
                 {
                     src: "node_modules/@knadh/oat/oat.min.js",
-                    dest: "../website/static/assets/",
+                    dest: "../website/client/assets/",
                 },
                 {
                     src: "node_modules/highlight.js/styles/github-dark.min.css",
-                    dest: "../website/static/assets/",
+                    dest: "../website/client/assets/",
                 },
             ],
         }),
