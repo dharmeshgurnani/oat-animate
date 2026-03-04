@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "dev": "astro dev",
-        "build": "node ../bin/build-site.mjs",
+        "build": "astro build",
         "deploy": "wrangler pages deploy public"
     },
     "dependencies": {
