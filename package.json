@@ -3,6 +3,9 @@
   "version": "1.2.0",
   "description": "",
   "type": "module",
+  "workspaces": [
+    "website"
+  ],
   "main": "oat-animate/oat-animate.js",
   "homepage": "https://oat-animate.dharmeshgurnani.com",
   "author": "dharmesh gurnani (https://dharmeshgurnani.com)",
