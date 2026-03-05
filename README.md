@@ -2,6 +2,8 @@
 
 ![Oat Animate Logo](https://oat-animate.dharmeshgurnani.com/assets/logo.svg)
 
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=dharmeshgurnani.oat-animate)
+
 Oat Animate is a lightweight animation extension for [Oat](https://github.com/knadh/oat), plus a docs/demo website that showcases how to use it.
 
 This repository currently serves two purposes:
